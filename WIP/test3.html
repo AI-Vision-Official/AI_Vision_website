@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Vision World Portal</title>
+
+  <style>
+    :root {
+      --bg-color: #0a0a23;
+      --glass: rgba(255, 255, 255, 0.1);
+      --glow: #00ffff;
+      --hover-glow: #ffffff;
+      --card-width: 150px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      overflow: hidden;
+      color: white;
+    }
+
+    .scene {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .globe {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #00faff 0%, #000831 80%);
+      animation: spin 30s linear infinite;
+      box-shadow: 0 0 30px var(--glow);
+      position: absolute;
+      top: 5%;
+    }
+
+    @keyframes spin {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      position: absolute;
+      bottom: 5%;
+    }
+
+    .card {
+      width: var(--card-width);
+      height: 100px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 25px var(--hover-glow);
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="globe"></div>
+    <div class="cards-container">
+      <div class="card" onclick="location.href='africa.html'">Africa</div>
+      <div class="card" onclick="location.href='europe.html'">Europe</div>
+      <div class="card" onclick="location.href='asia.html'">Asia</div>
+      <div class="card" onclick="location.href='north-america.html'">North America</div>
+      <div class="card" onclick="location.href='south-america.html'">South America</div>
+      <div class="card" onclick="location.href='oceania.html'">Oceania</div>
+      <div class="card" onclick="location.href='antarctica.html'">Antarctica</div>
+    </div>
+  </div>
+</body>
+</html>
+
+ 

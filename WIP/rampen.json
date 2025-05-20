@@ -1,0 +1,21 @@
+[
+    {
+      "type": "Earthquake",
+      "location": "Nepal",
+      "magnitude": 7.8,
+      "lat": 28.1470,
+      "lon": 84.7096,
+      "date": "2015-04-25",
+      "color": "red"
+    },
+    {
+      "type": "Flood",
+      "location": "Bangladesh",
+      "magnitude": 6.5,
+      "lat": 23.685,
+      "lon": 90.3563,
+      "date": "2020-07-01",
+      "color": "blue"
+    }
+  ]
+  

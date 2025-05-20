@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="dream-builder.css">
+  <title>Co-Creation Lab</title>
+
+<body-co-creation>
+  <section class="co-creation-lab" id="co-creation-lab">
+    <h2 class="section-title lab-title">Co-Creation Lab</h2>
+    <p class="section-text lab-intro">
+      In this sacred space, we build dreams together. Add your voice, your vision, your value.<br>
+      What would you create — if you knew others would help you bring it to life?
+    </p>
+  
+    <form class="idea-form" id="ideaForm">
+      <label for="dreamerName">Your Name</label>
+      <input type="text" id="dreamerName" name="dreamerName" placeholder="Dreamer's Name" required>
+  
+      <label for="ideaInput">Your Idea</label>
+      <textarea id="ideaInput" name="ideaInput" placeholder="Describe your co-creation idea..." required></textarea>
+  
+      <button type="submit" class="follow-button">Send to the Lab</button>
+    </form>
+  
+    <div class="submitted-ideas" id="submittedIdeas">
+      <h3>Shared Visions</h3>
+      <ul></ul>
+    </div>
+
+  <div class="lab-container">
+    <h2>Keep Your Dreams Safe</h2>
+    <p>Drop your ideas in the drawers. Together, we shape the future.</p><br>
+
+    <!-- Drawer 1 -->
+    <div class="drawer">
+      <div class="drawer-header" onclick="toggleDrawer(this)">
+        🌱 Environment & Sustainability
+        <span>+</span>
+      </div>
+      <div class="drawer-content">
+        <div class="ideas" id="env-ideas"></div>
+        <div class="input-group">
+          <input type="text" placeholder="Your idea..." id="env-input">
+          <button onclick="addIdea('env')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer 2 -->
+    <div class="drawer">
+      <div class="drawer-header" onclick="toggleDrawer(this)">
+        🤝 Social Impact
+        <span>+</span>
+      </div>
+      <div class="drawer-content">
+        <div class="ideas" id="social-ideas"></div>
+        <div class="input-group">
+          <input type="text" placeholder="Your idea..." id="social-input">
+          <button onclick="addIdea('social')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer 3 -->
+    <div class="drawer">
+      <div class="drawer-header" onclick="toggleDrawer(this)">
+        🔮 Technology & AI
+        <span>+</span>
+      </div>
+      <div class="drawer-content">
+        <div class="ideas" id="tech-ideas"></div>
+        <div class="input-group">
+          <input type="text" placeholder="Your idea..." id="tech-input">
+          <button onclick="addIdea('tech')">Add</button>
+        </div>
+      </div>
+      </div>
+
+       <!-- Drawer 4 -->
+    <div class="drawer">
+      <div class="drawer-header" onclick="toggleDrawer(this)">
+        🌿 Planet Earth
+        <span>+</span>
+      </div>
+      <div class="drawer-content">
+        <div class="ideas" id="env-ideas"></div>
+        <div class="input-group">
+          <input type="text" placeholder="Your idea..." id="env-input">
+          <button onclick="addIdea('env')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer 5 -->
+    <div class="drawer">
+      <div class="drawer-header" onclick="toggleDrawer(this)">
+        🧠 Innovation
+        <span>+</span>
+      </div>
+      <div class="drawer-content">
+        <div class="ideas" id="social-ideas"></div>
+        <div class="input-group">
+          <input type="text" placeholder="Your idea..." id="social-input">
+          <button onclick="addIdea('social')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer 6 -->
+    <div class="drawer">
+      <div class="drawer-header" onclick="toggleDrawer(this)">
+        💖 Humanity & Healing
+        <span>+</span>
+      </div>
+      <div class="drawer-content">
+        <div class="ideas" id="tech-ideas"></div>
+        <div class="input-group">
+          <input type="text" placeholder="Your idea..." id="tech-input">
+          <button onclick="addIdea('tech')">Add</button>
+        </div>
+      </div>
+    </div>
+          <!-- Drawer 7 -->
+    <div class="drawer">
+      <div class="drawer-header" onclick="toggleDrawer(this)">
+        🎨 Art & Beauty
+        <span>+</span>
+      </div>
+      <div class="drawer-content">
+        <div class="ideas" id="tech-ideas"></div>
+        <div class="input-group">
+          <input type="text" placeholder="Your idea..." id="tech-input">
+          <button onclick="addIdea('tech')">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="script.js"></script>
+<script src="dream-builder.js"></script>

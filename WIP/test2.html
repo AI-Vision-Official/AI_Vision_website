@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Gateway</title>
+  <style>
+    :root {
+      --bg: #0d0f1f;
+      --globe-glow: #5edfff;
+      --continent-hover: rgba(255, 255, 255, 0.1);
+      --label-color: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      overflow-x: hidden;
+      color: var(--label-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .globe-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, var(--globe-glow), #0a0c18);
+      box-shadow: 0 0 40px var(--globe-glow);
+      margin-bottom: 2rem;
+      animation: rotateGlobe 60s linear infinite;
+    }
+
+    @keyframes rotateGlobe {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    .continents {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .continent {
+      background: #1b1f30;
+      border: 1px solid #2e3a50;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .continent:hover {
+      background: var(--continent-hover);
+      transform: scale(1.05);
+    }
+
+    .continent a {
+      text-decoration: none;
+      color: var(--label-color);
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .globe-container {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the World We Dream</h1>
+  <div class="globe-container"></div>
+
+  <div class="continents">
+    <div class="continent"><a href="#">🌍 Africa</a></div>
+    <div class="continent"><a href="#">🌎 South America</a></div>
+    <div class="continent"><a href="#">🌏 Asia</a></div>
+    <div class="continent"><a href="#">🌐 Europe</a></div>
+    <div class="continent"><a href="#">🌊 Oceania</a></div>
+    <div class="continent"><a href="#">❄️ Antarctica</a></div>
+    <div class="continent"><a href="#">🌬️ North America</a></div>
+  </div>
+</body>
+</html>

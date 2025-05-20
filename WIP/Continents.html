@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #001f3f, #003366);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .globe {
+      width: 300px;
+      height: 300px;
+      background: url('/path/to/your/globe-image.png') no-repeat center/contain;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .continent {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      padding: 20px 30px;
+      color: #ffffff;
+      font-size: 1.5rem;
+      text-align: center;
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .continent:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    /* Posities */
+    .north-america { top: 20%; left: 15%; }
+    .south-america { top: 50%; left: 10%; }
+    .europe        { top: 70%; left: 40%; }
+    .africa        { top: 40%; right: 15%; }
+    .asia-pacific  { bottom: 15%; right: 10%; }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="globe"></div>
+
+  <div class="continent north-america" onclick="alert('North America clicked!')">North America</div>
+  <div class="continent south-america" onclick="alert('South America clicked!')">South America</div>
+  <div class="continent europe" onclick="alert('Europe clicked!')">Europe</div>
+  <div class="continent africa" onclick="alert('Africa clicked!')">Africa</div>
+  <div class="continent asia-pacific" onclick="alert('Asia-Pacific clicked!')">Asia-Pacific</div>
+</div>
+
+</body>
+</html>

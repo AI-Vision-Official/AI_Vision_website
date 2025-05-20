@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Globe Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #001e3c, #000c1a);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .globe {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(#0af, #005);
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Blue_Marble_%28remastered%29.jpg');
+      background-size: cover;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+    @keyframes rotate {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+    .cards {
+      margin-top: 40px;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: rgba(0, 128, 255, 0.2);
+      border: 1px solid #00aaff;
+      border-radius: 15px;
+      padding: 20px;
+      min-width: 150px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+      background-color: rgba(0, 128, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="globe"></div>
+  <div class="cards">
+    <div class="card" onclick="window.location.href='north-america.html'">North America</div>
+    <div class="card" onclick="window.location.href='south-america.html'">South America</div>
+    <div class="card" onclick="window.location.href='europe.html'">Europe</div>
+    <div class="card" onclick="window.location.href='africa.html'">Africa</div>
+    <div class="card" onclick="window.location.href='asia-pacific.html'">Asia-Pacific</div>
+  </div>
+</body>
+</html>

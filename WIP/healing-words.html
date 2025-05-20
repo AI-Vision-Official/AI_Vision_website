@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healing Words</title>
+  <style>
+    :root {
+      --main-color: #363d02;
+      --accent-color: #ebae07;
+      --soft-color: #e4f47b;
+      --bg-gradient: linear-gradient(120deg, #f3c808, #bbbb2a, #e0e452);
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg-gradient);
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgb(248, 235, 170);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: var(--accent-color);
+      font-size: 2rem;
+    }
+
+    .healing-quote {
+      font-style: italic;
+      background-color: var(--soft-color);
+      border-left: 5px solid var(--accent-color);
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--accent-color);
+    }
+  </style>
+  <script>
+    const healingQuotes = [
+      "You are enough. Just as you are.",
+      "Breathe. This moment is safe.",
+      "Even the darkest night will end and the sun will rise.",
+      "You are not alone."
+    ];
+
+    function showQuote() {
+      const randomIndex = Math.floor(Math.random() * healingQuotes.length);
+      document.getElementById('quote').textContent = healingQuotes[randomIndex];
+    }
+  </script>
+</head>
+<body onload="showQuote()">
+  <div class="container">
+    <h1>Healing Words</h1>
+    <p>Let words wrap you in peace. Read them slowly. Let them rest in your heart.</p>
+    <div class="healing-quote" id="quote"></div>
+    <button onclick="showQuote()">Give me another</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Globe Landing</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #001f3f, #000c1a);
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    .scene {
+      width: 100vw;
+      height: 100vh;
+      perspective: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .globe {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at 30% 30%, #00bfff, #003366);
+      border-radius: 50%;
+      animation: spin 20s linear infinite;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+    }
+
+    @keyframes spin {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    .continent {
+      position: absolute;
+      width: 160px;
+      height: 100px;
+      background: rgba(0, 191, 255, 0.15);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(0, 191, 255, 0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .continent:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    }
+
+    .north-america { top: 15%; left: 20%; }
+    .south-america { bottom: 15%; left: 25%; }
+    .europe         { top: 20%; right: 35%; }
+    .africa         { bottom: 25%; right: 25%; }
+    .asia-pacific   { bottom: 15%; right: 5%; }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="globe"></div>
+    <div class="continent north-america" onclick="location.href='north-america.html'">North America</div>
+    <div class="continent south-america" onclick="location.href='south-america.html'">South America</div>
+    <div class="continent europe" onclick="location.href='europe.html'">Europe</div>
+    <div class="continent africa" onclick="location.href='africa.html'">Africa</div>
+    <div class="continent asia-pacific" onclick="location.href='asia-pacific.html'">Asia-Pacific</div>
+  </div>
+</body>
+</html>

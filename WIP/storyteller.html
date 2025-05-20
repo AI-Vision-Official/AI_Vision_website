@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Lab</title>
+  <style>
+    :root {
+      --main-color: #b692fe;
+      --accent-color: #2e1d3d;
+      --soft-color: #edd2fc;
+      --bg-gradient: linear-gradient(135deg, #392059, #6e4e8e, #e3a9f8);
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg-gradient);
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: var(--accent-color);
+      font-size: 2rem;
+    }
+
+    textarea {
+      width: 95%;
+      height: 300px;
+      margin-top: 1rem;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tell Your Story</h1>
+    <p>
+      This is your space to let it out. Memories, thoughts, dreams—whatever needs a voice. Your story matters.
+    </p>
+    <textarea placeholder="Once upon a time..."></textarea>
+    <button onclick="alert('Your story is safe here. Keep writing.')">Save Story</button>
+  </div>
+</body>
+</html>

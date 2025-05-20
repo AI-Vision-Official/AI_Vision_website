@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Vision Landing</title>
+  <style>
+    :root {
+      --deep-blue: #0c1023;
+      --electric-blue: #2bdfff;
+      --soft-purple: #9c4eff;
+      --highlight-glow: rgba(43, 223, 255, 0.5);
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--deep-blue);
+      color: white;
+      height: 100vh;
+    }
+
+    .parallax {
+      background: url("AI Vision Logo.png") no-repeat center center;
+      background-size: contain;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      transition: background-position 0.1s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(135deg, transparent 50%, var(--highlight-glow) 100%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .intro-text {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .intro-text h1 {
+      font-size: 2.5rem;
+      color: var(--electric-blue);
+      margin: 0;
+    }
+
+    .intro-text p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .cta-button {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background-color: var(--soft-purple);
+      color: white;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      box-shadow: 0 0 20px var(--soft-purple);
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateX(-50%) scale(1.05);
+      box-shadow: 0 0 30px var(--electric-blue);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax" id="parallax">
+    <div class="overlay"></div>
+    <div class="intro-text">
+      <h1>AI Vision</h1>
+      <p>Enter a realm of imagination where AI becomes your greatest ally.</p>
+    </div>
+    <button class="cta-button" onclick="location.href='index.html'">Step into the Vision</button>
+  </div>
+
+  <script>
+    const parallax = document.getElementById('parallax');
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      parallax.style.backgroundPosition = `${x}% ${y}%`;
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Builder Pages</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dream-builder.css" />
+  <link rel="stylesheet" href="home.css" />
+  <style>
+    :root {
+      --main-color: #76c599;
+      --accent-color: #00c9a7;
+      --soft-color: #136822;
+      --text-color: #094b13;
+      --bg-gradient: linear-gradient(120deg, #188558, #238173, #1ed272);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-gradient);
+      color: #86dba8;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      background: #c8e4c2;
+      color:#d1ecca;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #113208;
+     text-align: center;
+    }
+
+    .section-text {
+      margin: 1rem 0;
+      text-align: center;
+      color:#094b13;
+    }
+
+    .follow-button {
+      display: inline-block;
+      background-color: var(--main-color);
+      color: rgb(2, 37, 10);
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .follow-button:hover {
+      background-color: var(--accent-color);
+    }
+
+    .quote-box {
+      font-style: italic;
+      color:#022808;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #f0f9f4;
+      border-left: 5px solid var(--main-color);
+    }
+  </style>
+</head>
+<body>
+    <body class="dream-builder-body">
+        <main class="dream-builder">
+          <section class="dream-intro">
+            <h1>Welcome, Dream Builder</h1>
+            <p>Here, your imagination becomes reality. Choose your path.</p>
+          </section>
+      
+          <section class="dream-options">
+            <button class="dream-option" data-dream="poem">I want to write a poem</button>
+            <button class="dream-option" data-dream="story">I want to tell a story</button>
+            <button class="dream-option" data-dream="design">I want to design something</button>
+            <button class="dream-option" data-dream="healing">I need healing words</button>
+          </section>
+      
+          <section class="dream-result hidden" id="dreamResult">
+            <h1>Your dream starts here</h1>
+            <p id="dreamMessage"></p>
+            <a href="home.html" class="back-home">← Back to the beginning</a>
+          </section>
+        </main>
+    
+<section class="section" id="tell-a-story">
+    <h2 class="section-title">I Want to Write a Poem</h2>
+    <p class="section-text">
+        Let your soul speak. Choose a feeling to inspire your poem. 
+        And let your words guide you into  a new world
+    </p>
+    <a href="/poem-builder.html" class="follow-button">Go to Poem Builder</a>
+    <div class="quote-box">“What words cannot say, the soul will sing.”</div>
+  </section>
+  <section class="section" id="tell-a-story">
+    <h2 class="section-title">I Want to Tell a Story</h2>
+    <p class="section-text">
+      Stories heal. They shape who we are, whisper our truth, and connect hearts beyond borders.
+      Whether it's a real memory or a dream that lingers—this is your space.
+    </p>
+    <a href="/storyteller.html" class="follow-button">Go to Story Lab</a>
+    <div class="quote-box">“What is not spoken, becomes the silence we carry.”</div>
+  </section>
+  <section class="section" id="design-something">
+    <h2 class="section-title">I Want to Design Something</h2>
+    <p class="section-text">
+      The future starts with an idea. A spark. A vision. Whether it's a poster, a logo, or a layout—this space is your creative launchpad.
+    </p>
+    <a href="/design-studio.html" class="follow-button">Enter Design Hub</a>
+    <div class="quote-box">“Design is the silent ambassador of your dreams.” – Paul Rand</div>
+  </section>
+
+  <section class="section" id="healing-words">
+    <h2 class="section-title">I Need Healing Words</h2>
+    <p class="section-text">
+      Words can break—but they can also build, mend, soften. Come, breathe here. Let these words wrap around your soul like a warm light.
+    </p>
+    <a href="/healing-words.html" class="follow-button">Receive Healing Words</a>
+    <div class="quote-box" id="healing-quote">“You are not broken. You are healing.”</div>
+  </section>
+
+  <script>
+    // Healing Words Randomizer
+    const healingQuotes = [
+      "You are not broken. You are healing.",
+      "Even the moon has scars, and it still shines.",
+      "Some days just breathing is a victory.",
+      "You are allowed to rest. That is part of healing.",
+      "Healing doesn’t mean the damage never existed."
+    ];
+
+    const quoteBox = document.getElementById("healing-quote");
+    quoteBox.addEventListener("click", () => {
+      const newQuote = healingQuotes[Math.floor(Math.random() * healingQuotes.length)];
+      quoteBox.textContent = `“${newQuote}”`;
+    });
+  </script>
+    <script src="dream-builder.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

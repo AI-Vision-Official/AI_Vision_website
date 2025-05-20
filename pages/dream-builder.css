@@ -1,0 +1,461 @@
+.dream-builder-body {
+  background: linear-gradient(135deg, hwb(132 5% 75%), hwb(126 9% 67%), #00c9a7);
+    color: #e7f7e5;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .dream-builder h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #cefadd;
+  }
+  
+  .dream-builder p {
+    font-size: 1.2rem;
+    color: #d6f7e2;
+  }
+  
+  .dream-options {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .dream-option {
+    color: #5ad564; /* Groene kleur voor de tekst in de "Together" sectie */
+    background: #a3ffc3; /* Replace with a valid color or gradient */
+    color: hsl(201, 86%, 9%);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .dream-option:hover {
+    background: #ffafcc;
+    transform: scale(1.05);
+  }
+  
+  .dream-result {
+    margin-top: 3rem;
+  }
+  
+  .back-home {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #e29cfc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .poem-builder-body {
+    background: linear-gradient(120deg, #340040, #733684, #dc50f2);
+    color: #f5c4eb;
+    font-family: 'Georgia', serif;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .poem-builder input[type="text"] {
+    width: 80%;
+    padding: 0.7rem;
+    margin: 0.5rem auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .emotion-button {
+    margin: 0.5rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e29eed;
+    color: #1a1a40;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .emotion-button:hover {
+    background-color: #ffc8dd;
+  }
+  
+  #generatePoem {
+    margin-top: 1rem;
+    background: #cdb4db;
+    color: #1e0639;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .poem-result pre {
+    background-color: #2d1b4a;
+    padding: 1rem;
+    border-radius: 15px;
+    font-style: italic;
+    white-space: pre-wrap;
+  }
+  
+  .video-gallery-body {
+    background: linear-gradient(120deg, #02364d, #165d74, #539cbb);
+    color: #121f25;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .video-gallery h1 {
+    color: #121f25;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .video-gallery p {
+    color: #121f25;
+    margin-bottom: 2rem;
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .video-item {
+    background-color: #121f25;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+  
+  .video-item iframe,
+  .video-item video {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  .video-item p {
+    margin-top: 0.7rem;
+    color: #f8f8f8;
+    font-style: italic;
+  }
+
+  .energy-buttons button {
+    background: #b96ff5;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    margin: 0.5rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: background 0.3s;
+  }
+  
+  .energy-buttons button:hover {
+    background: #7b2cbf;
+    cursor: pointer;
+  }
+  
+  .energy-response {
+    margin-top: 1.5rem;
+    font-style: italic;
+    font-size: 1.9rem;
+    color: #3e0505;
+  }
+
+  .energy-buttons button {
+    background: hsl(0, 82%, 17%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    margin: 0.5rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: background 0.3s;
+  }
+  
+  .energy-buttons button:hover {
+    background: #7b2cbf;
+    cursor: pointer;
+  }
+  
+  .energy-response {
+    margin-top: 1.5rem;
+    font-style: italic;
+    font-size: 1.9rem;
+    color: #430202;
+  }
+  .energy-flow {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f0f4f8;
+    border-radius: 20px;
+    margin: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .energy-flow .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #330202;
+  }
+  
+  .energy-flow .intro-text {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #250202;
+  }
+  
+  .flow-buttons button {
+    margin: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #0077cc;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .flow-buttons button:hover {
+    background-color: #005fa3;
+  }
+  
+  .flow-message {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #444;
+    font-size: 1.1rem;
+    min-height: 60px;
+    transition: all 0.4s ease;
+  }
+  
+  .flow-link {
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background-color: #28a745;
+    color: rgb(53, 2, 2);
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .flow-link:hover {
+    background-color: #1e7e34;
+  }
+  .co-creation-lab {
+    padding: 2rem;
+    background-color: linear-gradient(120deg, rgb(50, 0, 29), rgb(134, 59, 171), #d875fc);
+    color: var(--section-text);
+    border-radius: 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .idea-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .idea-form input,
+  .idea-form textarea {
+    padding: 0.75rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .submitted-ideas {
+    margin-top: 2rem;
+    background: #f29c08;
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+  
+  .submitted-ideas ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .submitted-ideas li {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  :root {
+    --drawer-color: #f0f0f0;
+    --accent: #6c63ff;
+    --card-color: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background:  linear-gradient(120deg, rgb(243, 117, 7), rgb(200, 96, 21), #f7a814);
+    color: #430202;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .drawer-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .drawer {
+    background: var(--drawer-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .drawer-header {
+    background: var(--accent);
+    color: rgb(65, 4, 4);
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .drawer-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #430202;
+    padding: 0 1rem;
+  }
+
+  .drawer-content.open {
+    padding: 1rem;
+    max-height: 500px;
+  }
+
+  .idea-card {
+    background: #430202;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 6px var(--shadow);
+  }
+
+  form {
+    margin-top: 1rem;
+  }
+
+  input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 80%;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background-color: var(--accent);
+    color: rgb(64, 4, 4);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #574bff;
+  }
+  body-co-creation {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(120deg, rgb(241, 167, 20), rgb(240, 158, 26), #f7a814);
+    padding: 2rem;
+  }
+
+  .lab-container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .drawer {
+    background: #f5910f;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .drawer-header {
+    padding: 1rem;
+    color: #f8eddb;
+    background: #550505;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .drawer-content {
+    display: none;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+  }
+
+  .idea-card {
+    background: #3c0142;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-left: 4px solid #6c63ff;
+    border-radius: 5px;
+  }
+
+  .input-group {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .input-group input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .input-group button {
+    padding: 0.5rem 1rem;
+    background: #6c63ff;
+    color: #f39c12;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .input-group button:hover {
+    background: #574dd6;
+  }
+  
+
+   

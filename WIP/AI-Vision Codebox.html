@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Vision Codebox</title>
+  <style>
+    :root {
+      --main-bg: #0d1b2a;
+      --main-fg: #e0e1dd;
+      --accent: #1b263b;
+      --highlight: #778da9;
+      --shadow: rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--main-fg);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: var(--accent);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px var(--shadow);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .editor, .preview {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--accent);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px var(--shadow);
+    }
+
+    textarea {
+      flex: 1;
+      background-color: #202932;
+      color: var(--main-fg);
+      border: none;
+      padding: 1rem;
+      font-family: monospace;
+      font-size: 1rem;
+      border-radius: 0.3rem;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+
+    iframe {
+      flex: 1;
+      border: none;
+      background: white;
+    }
+
+    button {
+      background-color: var(--highlight);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    button:hover {
+      background-color: var(--main-fg);
+      color: var(--main-bg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌟 AI Vision Codebox</h1>
+  </header>
+  <main>
+    <div class="editor">
+      <h2>HTML</h2>
+      <textarea id="htmlInput" placeholder="Type je HTML hier..."></textarea>
+      <h2>CSS</h2>
+      <textarea id="cssInput" placeholder="Type je CSS hier..."></textarea>
+      <button onclick="updatePreview()">Update Preview</button>
+    </div>
+    <div class="preview">
+      <h2>Preview</h2>
+      <iframe id="preview" title="Live code preview"></iframe>
+    </div>
+  </main>
+  <footer>
+    Gemaakt door Brigitte - Gratis en met liefde 💖
+  </footer>
+
+  <script>
+    function updatePreview() {
+      const html = document.getElementById("htmlInput").value;
+      const css = document.getElementById("cssInput").value;
+      const previewFrame = document.getElementById("preview");
+      const previewDocument = previewFrame.contentDocument || previewFrame.contentWindow.document;
+
+      previewDocument.open();
+      previewDocument.write(`<!DOCTYPE html><html><head><style>${css}</style></head><body>${html}</body></html>`);
+      previewDocument.close();
+    }
+  </script>
+</body>
+</html>

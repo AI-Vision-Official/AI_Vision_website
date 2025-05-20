@@ -1,0 +1,88 @@
+/* Globale instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* Donkere achtergrond om de globe te laten opvallen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#globe-container {
+    position: relative;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 50%;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.3); /* Maak de achtergrond iets donkerder */
+}
+#globe-container {
+    position: relative;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 50%;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5); /* Versterkte gloed voor de globe */
+    animation: rotateGlobe 20s linear infinite;
+    transform-style: preserve-3d;
+    background: rgba(255, 255, 255, 0.1); /* Probeer de transparantie te verhogen voor een glanzend effect */
+    backdrop-filter: blur(10px); /* Verminderen van de blur voor een scherper effect */
+}
+
+
+/* Het draaien van de globe */
+@keyframes rotateGlobe {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Het uiterlijk van de continenten */
+#continents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Glasachtige uitstraling voor de continenten */
+.continent {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8); /* Duidelijker wit voor continenten */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Hover-effect voor continenten */
+.continent:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+}
+#globe {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(15px); /* Soms moet je ook -webkit toevoegen */
+    -webkit-backdrop-filter: blur(15px); /* Voor Safari en oude Chrome versies */
+}
+body {
+    background-color: lightblue; /* Als de achtergrondkleur verandert, is de CSS goed geladen */
+}
+/* De globe draait en de continenten hebben een hover-effect */
+/* Dit is een indicatie dat de CSS goed geladen is */

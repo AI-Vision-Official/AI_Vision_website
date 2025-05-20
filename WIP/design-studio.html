@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Lab</title>
+  <style>
+    :root {
+      --main-color: #4e0b0b;
+      --accent-color: #5b1818;
+      --soft-color: #bf6f6f;
+      --bg-gradient: linear-gradient(135deg, #490d0d, #ac3838, #f29c9c);
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg-gradient);
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgb(255, 209, 209);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: var(--accent-color);
+      font-size: 2rem;
+    }
+
+    .idea-box {
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Design Something</h1>
+    <p>Let your creativity flow. Start sketching out an idea, a concept, or even your dream project.</p>
+
+    <div class="idea-box">
+      <label for="project-name">Project Name:</label>
+      <input id="project-name" type="text" placeholder="My Healing App, Green Dome, Global Map...">
+    </div>
+
+    <div class="idea-box">
+      <label for="project-idea">Describe your idea:</label>
+      <textarea id="project-idea" placeholder="A project to connect people, a tool to help heal, a space to imagine..."></textarea>
+    </div>
+
+    <button onclick="alert('Design logged. Don’t stop dreaming!')">Save Idea</button>
+  </div>
+</body>
+</html>

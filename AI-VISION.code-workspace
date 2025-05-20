@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"explorer.sortOrder": "modified",
+		"github-actions.remote-name": "AI-vision-ps",
+		"github-actions.use-enterprise": false
+	}
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Vision – De toekomst samen bouwen</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1>AI Vision</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#start">Home</a></li>
+          <li><a href="#articles">Artikelen</a></li>
+          <li><a href="#about">Over</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="start" class="hero">
+      <div class="container">
+        <h2>Samenwerken met AI, met hart en verstand</h2>
+        <p>Ontdek hoe AI en mens elkaar kunnen versterken in een wereld die steeds sneller verandert.</p>
+      </div>
+    </section>
+
+    <section id="articles" class="content-section">
+      <div class="container">
+        <!-- Hier komen de AI-artikelen zoals die van net -->
+        <!-- Je kunt dit dynamisch maken met JS als je wilt -->
+        <article class="ai-article">
+          <h3>Mens en AI: samenwerken met wijsheid</h3>
+          <p>Zie <strong>artikel hierboven</strong> om hier in te plakken. Ik kan het ook direct hierin integreren.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 AI Vision – Brigitte Schrijvers | In samenwerking met ChatGPT</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

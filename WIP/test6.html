@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI World Interface</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .scene {
+      position: relative;
+      width: 90vw;
+      max-width: 1200px;
+      height: 80vh;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      box-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+
+    .globe {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at 30% 30%, #66f, #339);
+      border-radius: 50%;
+      box-shadow: inset -10px -10px 20px rgba(0,0,0,0.4), inset 10px 10px 20px rgba(255,255,255,0.1);
+      animation: spin 40s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes spin {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    .card {
+      position: absolute;
+      width: 160px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.1) rotateZ(1deg);
+      box-shadow: 0 10px 30px rgba(0,255,255,0.4);
+    }
+
+    .card h3 {
+      margin: 10px;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .africa { top: 10%; left: 10%; }
+    .europe { top: 10%; right: 10%; }
+    .asia { bottom: 20%; right: 5%; }
+    .america { bottom: 15%; left: 5%; }
+    .oceania { bottom: 10%; right: 35%; }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="globe"></div>
+    <div class="card africa" onclick="goTo('africa.html')"><h3>Africa</h3></div>
+    <div class="card europe" onclick="goTo('europe.html')"><h3>Europe</h3></div>
+    <div class="card asia" onclick="goTo('asia.html')"><h3>Asia</h3></div>
+    <div class="card america" onclick="goTo('america.html')"><h3>America</h3></div>
+    <div class="card oceania" onclick="goTo('oceania.html')"><h3>Oceania</h3></div>
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  background-color: #0a0f1c;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+  display: block;
+}

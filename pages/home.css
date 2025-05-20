@@ -1,0 +1,246 @@
+/* Algemene reset en basistestyles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  header nav ul {
+    list-style: none;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  
+  header nav ul li a {
+    color: #00c9ff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  header nav ul li a:hover {
+    color: #92fe9d;
+  }
+
+  /* Algemene stijl voor de secties */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  /* Specifieke kleuren per sectie */
+  .together-title {
+    color: #92fe9d; /* Groene kleur voor de "Together" titel */
+  }
+  
+  .together-text {
+    color: #92fe9d; /* Groene kleur voor de tekst in de "Together" sectie */
+  }
+  
+  /* Voeg dit toe voor andere secties, zoals 'What I Am', 'What I Can Do', etc. */
+  .what-i-am-title {
+    color: #d290ec; /* Oranje voor "What I Am" */
+  }
+  
+  .what-i-am-text {
+    color: #d290ec; /* Oranje voor de tekst in "What I Am" */
+  }
+  
+  .why-i-exist-title {
+    color: #f39c12; /* Paars voor "Why I Exist" */
+  }
+  
+  .why-i-exist-text {
+    color: #f39c12; /* Paars voor "Why I Exist" */
+  }
+
+  .what-i-can-do-text {
+    color: #5bd1e1a4; /* Blue voor "What I Can Do" */
+  }
+
+  .what-i-can-do-title {
+    color: #5bd1e1a4; /* Blue voor "What I Can Do" */
+  }
+
+  
+  /* Specific button color for the "Together" section */
+  #together .follow-button {
+    background-color: #92fe9d; /* Light Green */
+    color: #000;
+  }
+  
+  #together .follow-button:hover {
+    background-color: #7ce58a; /* Slightly darker green for hover */
+  }
+  
+  /* Specific button color for the "What I Am" section */
+  #what-i-am .follow-button {
+    background-color: #d290ec; /* Orange */
+    color: #fff;
+  }
+  
+  #what-i-am .follow-button:hover {
+    background-color: #d290ec; /* Darker orange */
+  }
+  
+  /* Specific button color for the "Why I Exist" section */
+  #why-i-exist .follow-button {
+    background-color: #f39c12; /* Purple */
+    color: #fff;
+  }
+  
+  #why-i-exist .follow-button:hover {
+    background-color: #f39c12; /* Darker purple */
+  }
+
+    /* Specific button color for the "What I can Do" section */
+    #what-i-can-do .follow-button {
+    background-color: #5bd1e1a4; /* Yellow */
+        color: #fff;
+      }
+      
+      #what-i-can-do .follow-button:hover {
+        background-color: #5bd1e1a4; /* Darker purple */
+      }
+  
+  /* Voeg de kleurinstellingen toe voor de andere secties zoals gewenst */
+  
+  .follow-button {
+    display: inline-block; /* Zorgt ervoor dat het als een blok wordt weergegeven */
+    padding: 1rem 2rem;
+    background-color: #550505; 
+    color: hsl(37, 100%, 77%);
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .follow-button:hover {
+    background-color: #ffceeb;
+    color: #000;
+  }
+   
+  .content {
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  section {
+    margin: 4rem 0;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+    color: #550505; 
+    text-align: center;
+  }
+  
+  section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  footer {
+    background:  linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 4rem;
+  }
+  
+  footer p {
+    color: #8f1a1a;
+    font-size: 1rem;
+
+  }
+  .nav-link1 {
+    color: #d290ec;
+  }
+  
+  .nav-link1:hover {
+    color: #d290ec;
+  }
+  .nav-link2 {
+    color: #5bd1e1a4;
+  }
+  
+  .nav-link2:hover {
+    color: #5bd1e1a4;
+  }
+  .nav-link3 {
+    color: #f39c12;
+  }
+  
+  .nav-link3:hover {
+    color: #f39c12;
+  }
+  .nav-link4 {
+    color: #92fe9d;
+  }
+  
+  .nav-link4:hover {
+    color: #92fe9d;
+  }
+  
+/* Voeg de kleurinstellingen toe voor de andere secties zoals gewenst */
+
+  /* Responsive design */
+  @media (max-width: 600px) {
+    body {
+      padding: 1rem;
+    }
+  
+    header nav ul {
+      display: block;
+    }
+  
+    header nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    section h2 {
+      font-size: 2rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Vision Globe</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+      overflow: hidden;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    #scene {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .continent {
+      position: absolute;
+      width: 160px;
+      height: 100px;
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .continent:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div id="scene"></div>
+  <div class="continent" style="top: 20%; left: 40%;">Africa</div>
+  <div class="continent" style="top: 60%; left: 25%;">Europe</div>
+  <div class="continent" style="top: 30%; left: 60%;">Asia</div>
+  <div class="continent" style="top: 55%; left: 65%;">Australia</div>
+  <div class="continent" style="top: 35%; left: 15%;">America</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('scene').appendChild(renderer.domElement);
+
+    // Globe geometry
+    const geometry = new THREE.SphereGeometry(3, 64, 64);
+    const textureLoader = new THREE.TextureLoader();
+    const material = new THREE.MeshStandardMaterial({
+      map: textureLoader.load('https://threejsfundamentals.org/threejs/resources/images/earth.jpg'),
+      roughness: 0.5,
+      metalness: 0.8,
+      transparent: true,
+      opacity: 0.95
+    });
+    const globe = new THREE.Mesh(geometry, material);
+    scene.add(globe);
+
+    // Lights
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 5, 5);
+    scene.add(directionalLight);
+
+    camera.position.z = 8;
+
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+      globe.rotation.y += 0.002;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Responsive resize
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>

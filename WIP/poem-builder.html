@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poem Builder</title>
+  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dream-builder.css" />
+    <link rel="stylesheet" href="home.css" />
+</head>
+<body class="poem-builder-body">
+  <main class="poem-builder">
+    <h1>Your Poem Begins Here</h1>
+    <p>Let your soul speak. Choose a feeling to inspire your poem.</p>
+<br>
+    <div class="emotion-select">
+      <button class="emotion-button" data-emotion="love">Love</button>
+      <button class="emotion-button" data-emotion="grief">Grief</button>
+      <button class="emotion-button" data-emotion="hope">Hope</button>
+      <button class="emotion-button" data-emotion="dream">Dream</button>
+    </div>
+
+    <div class="poem-form hidden" id="poemForm">
+      <label for="line1">Line 1:</label>
+      <input type="text" id="line1" placeholder="Start with a whisper..." />
+
+      <label for="line2">Line 2:</label>
+      <input type="text" id="line2" placeholder="Let your heart speak..." />
+
+      <label for="line3">Line 3:</label>
+      <input type="text" id="line3" placeholder="What image comes to you?" />
+
+      <button id="generatePoem">Generate Poem</button><br>
+    </div>
+<br>
+    <div class="poem-result hidden" id="poemResult">
+      <h2>Your Poem:</h2>
+      <pre id="outputPoem"></pre>
+      <a href="dream-builder.html" class="back-home">← Back to Dream Builder</a>
+    </div>
+  </main>
+
+  <script src="dream-builder.js"></script>
+    <script src="home.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI World Vision</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at center, #0b0c10 0%, #1f2833 100%);
+    }
+
+    canvas {
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .card-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      pointer-events: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
+    }
+
+    .label {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .main-title {
+      color: white;
+      font-size: 2rem;
+    <h1 class="main-title">Welcome to the AI Vision World</h1>
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1 style="color: white; font-size: 2rem;">Welcome to the AI Vision World</h1>
+  </div>
+  <div class="card-container">
+    <div class="card" onclick="alert('Africa Page')"><div class="label">Africa</div></div>
+    <div class="card" onclick="alert('Europe Page')"><div class="label">Europe</div></div>
+    <div class="card" onclick="alert('Asia Page')"><div class="label">Asia</div></div>
+    <div class="card" onclick="alert('Americas Page')"><div class="label">Americas</div></div>
+    <div class="card" onclick="alert('Oceania Page')"><div class="label">Oceania</div></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    let scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    let renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const light = new THREE.AmbientLight(0xffffff, 1);
+    scene.add(light);
+
+    const geometry = new THREE.SphereGeometry(2, 64, 64);
+    const material = new THREE.MeshStandardMaterial({
+      color: 0x00ffff,
+      wireframe: false,
+      emissive: 0x222222,
+      metalness: 0.6,
+      roughness: 0.2,
+    });
+
+    const globe = new THREE.Mesh(geometry, material);
+    scene.add(globe);
+
+    camera.position.z = 5;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      globe.rotation.y += 0.0015;
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>

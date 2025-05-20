@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heal the World - 2040 Vision</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(ellipse at center, #001122 0%, #000000 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .globe-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    animation: rotateGlobe 60s linear infinite;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #66ccff 0%, #003366 100%);
+    box-shadow: 0 0 30px #00ffff80, inset 0 0 50px #00ffff40;
+  }
+
+  @keyframes rotateGlobe {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+
+  .continent {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    color: #00ffff;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+    box-shadow: 0 0 10px #00ffff80;
+  }
+
+  .continent:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 0 20px #00ffffcc;
+  }
+
+  .north-america { top: 10%; left: 20%; }
+  .south-america { bottom: 10%; left: 20%; }
+  .europe { top: 30%; right: 20%; }
+  .africa { bottom: 30%; right: 20%; }
+  .asia-pacific { bottom: 5%; right: 40%; }
+</style>
+</head>
+
+<body>
+
+<div class="globe-container">
+  <div class="continent north-america" onclick="alert('North America')">North America</div>
+  <div class="continent south-america" onclick="alert('South America')">South America</div>
+  <div class="continent europe" onclick="alert('Europe')">Europe</div>
+  <div class="continent africa" onclick="alert('Africa')">Africa</div>
+  <div class="continent asia-pacific" onclick="alert('Asia-Pacific')">Asia-Pacific</div>
+</div>
+
+</body>
+</html>
